@@ -1,0 +1,9 @@
+body{
+    background-color: white;
+    font-family: Helvetica, sans-serif;
+}
+
+#big-heading{
+    border: double 5px black;
+    text-align: center;
+}
