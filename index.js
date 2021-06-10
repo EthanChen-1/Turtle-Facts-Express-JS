@@ -54,12 +54,6 @@ turtle_db_con.connect(function(err){
         return console.error('error: ' + err.message);
     }
     console.log(`Connected to the MySQL server on ${database}`);
-})
+});
 
-// turtle_db_con.end(function(err){
-//     if(err){
-//         return console.error('error: ' + err.message);
-//     }
-//     console.log('Closed the database connection.');
-// })
 app.listen(PORT, () => console.log(`Server started on port:${PORT}`));
