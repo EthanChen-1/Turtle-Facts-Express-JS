@@ -52,3 +52,30 @@ input{
     cursor       : pointer;
     background-color: lightgray;
 }
+
+@media only screen and (min-width: 300px) {
+    body{
+        width: 100%;
+    }
+    #turtle-form-div{
+        display: block;
+        text-align: center;
+    }
+    
+    #turtle-form{
+        font-size: 20px;
+        text-align: center;
+        width : 75%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+    
+    legend {
+        background-color: rgb(48, 240, 128);
+        color: #fff;
+        padding: 3px 6px;
+        position: relative;
+    }
+}
