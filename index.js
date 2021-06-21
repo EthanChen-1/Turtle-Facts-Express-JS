@@ -26,6 +26,12 @@ app.get('/css/:file', function(req, res){
     res.sendFile(path.join(__dirname, 'css', `${css_file.file}`));
 });
 
+app.get('/images/:img', function(req, res){
+    let img_file = req.params;
+    console.log(img_file);
+    res.sendFile(path.join(__dirname, 'images', `${img_file.img}`))
+})
+
 app.get('/statistics', function(req, res){
     console.log( req.socket.remoteAddress + " went to " + req.query);
     let get_info_db = `SELECT page_name, page_views from page_statistics`;
@@ -38,8 +44,6 @@ app.get('/statistics', function(req, res){
             table_headers += `<th>${result[i].page_name}</th>`;
             table_values += `<td>${result[i].page_views}</td>`;
         }
-        console.log(table_headers);
-        console.log(table_values);
         res.send(`
             <!DOCTYPE html>
             <html lang="en">
@@ -51,6 +55,7 @@ app.get('/statistics', function(req, res){
                 <link rel="stylesheet" href="/css/style-stats.css">
             </head>
             <body>
+                <h1>Page Statistics</h1>
                 <table>
                     <tr>
                         <td>Page Name</td>
