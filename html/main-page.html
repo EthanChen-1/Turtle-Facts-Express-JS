@@ -9,16 +9,26 @@
 </head>
 <body>
     <h1 id='big-heading'>Which turtle do you wish to know more about?</h1>
-    <form id='turtle-form' action="search" method="get">
-        <label for="species">Species</label>
-        <select name="choice">
-            <option value="res">Red Ear Slider</option>
-            <option value="ybs">Yellow Belly Slider</option>
-            <option value="mm">Mississippi Map</option>
-            <option value="pt">Painted Turtles</option>
-            <option value="cm">Common Musk</option>
-        </select>
-        <input type="submit" value="search">
-    </form>
+    <div id='turtle-form-div'>
+        <form id='turtle-form' action="/search" method="get">
+            <fieldset>
+                <legend>Choose your favorite turtle</legend>
+                <label for="species"></label>
+                <select name="choice">
+                <option value="res">Red Ear Slider</option>
+                <option value="ybs">Yellow Belly Slider</option>
+                <option value="mm">Mississippi Map</option>
+                <option value="pt">Painted Turtles</option>
+                <option value="cm">Common Musk</option>
+                </select>
+            <input type="submit" value="Search">
+            </fieldset>
+        </form>
+    </div> <br><br>
+    <div id="footer">
+        <form id='statistics-form' action="/statistics" method="get">
+            <input type="submit" value="stats">
+        </form>
+    </div>
 </body>
 </html>
